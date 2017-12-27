@@ -23,13 +23,11 @@ function keepGoing(array, changeValue, skipValue) {
 function findBy(array, findFn) {
   var debug
   for (let i = 0; i < array.length; i++) {
-    debug = findFn
-    print(findFn)
-    if (array[i] === debug) {
+    if (findFn(array[i])) {
       return (array[i])
-      break
+      //break
     }
-    print(array[i])
+    //print(array[i])
   }
   return(null)
 }
